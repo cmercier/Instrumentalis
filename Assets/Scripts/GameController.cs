@@ -52,7 +52,7 @@ public class GameController : MonoBehaviour {
 			affichage.text = "Bien joué " + (curseur+1) + "/" + sequences[numSeq].Length;
 			curseur++;
 			if(curseur == sequences[numSeq].Length){
-				affichage.text = "Félicitation, vous passez à la séquence suivante";
+				affichage.text = "Félicitation, vous pouvez passez à la séquence suivante";
 				curseur = 0;
 				numSeq++;
 				if(numSeq == sequences.Length)
