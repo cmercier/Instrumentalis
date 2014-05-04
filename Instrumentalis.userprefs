@@ -2,8 +2,11 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Play_Sound.cs">
     <Files>
-      <File FileName="Assets\Scripts\GameController.cs" Line="40" Column="51" />
-      <File FileName="Assets\Scripts\Play_Sound.cs" Line="13" Column="66" />
+      <File FileName="Assets\Scripts\GameControllerTutoQuiz.cs" Line="20" Column="78" />
+      <File FileName="Assets\Scripts\Next_Trigger.cs" Line="20" Column="2" />
+      <File FileName="Assets\Scripts\Previous_Trigger.cs" Line="23" Column="27" />
+      <File FileName="Assets\Scripts\Start_Game_Trigger.cs" Line="10" Column="84" />
+      <File FileName="Assets\Scripts\Play_Sound.cs" Line="18" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

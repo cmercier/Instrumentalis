@@ -55,7 +55,7 @@ public class GameController : MonoBehaviour {
 				affichage.text = "Félicitation, vous pouvez passez à la séquence suivante";
 				curseur = 0;
 				numSeq++;
-				if(numSeq == sequences.Length)
+				if(numSeq == sequences.Length) // Si tout est fini, on obtient la partie de l'instrument
 					numSeq = 0;
 				audioPlayer.clip = musiques [numSeq];
 			}
