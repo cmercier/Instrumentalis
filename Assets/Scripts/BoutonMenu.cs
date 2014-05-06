@@ -8,7 +8,11 @@ public class BoutonMenu : MonoBehaviour {
 	}
 
 	void OnMouseExit() {
-			renderer.enabled = false;
+		renderer.enabled = false;
+	}
+
+	void OnMouseDown() {
+		Application.LoadLevel ("Simon");
 	}
 	
 }
