@@ -56,7 +56,7 @@
      <Compile Include="Assets\Scripts\Play_Sound_Quiz.cs" />
      <Compile Include="Assets\Scripts\Previous_Trigger.cs" />
      <Compile Include="Assets\Scripts\Start_Game_Trigger.cs" />
-     <Compile Include="Assets\Scripts\Test_Reponse.cs" />
+     <Compile Include="Assets\Scripts\test_reponse.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

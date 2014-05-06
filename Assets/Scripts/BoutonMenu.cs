@@ -12,5 +12,9 @@ public class BoutonMenu : MonoBehaviour {
 		renderer.enabled = false;
 		audio.Stop ();
 	}
+
+	void OnMouseDown() {
+		Application.LoadLevel ("Simon");
+	}
 	
 }
