@@ -1,11 +1,10 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Test_Reponse : MonoBehaviour {
+public class test_reponse : MonoBehaviour {
 
 	private GameControllerQuiz gameController;
-	public 
-	
+
 	void Start ()
 	{
 		GameObject gameControllerObject = GameObject.FindWithTag ("GameControllerQuiz");
