@@ -22,7 +22,7 @@ public class GameControllerQuiz : MonoBehaviour {
 	
 	public GameControllerQuiz()
 	{
-		effets_texte = new String[]{"Delay","Filtre Pass Haut", "Filtre Pass Bas", "effet 4", "effet 5"};
+		effets_texte = new String[]{"Clean","Delay","Distortion","Echo", "Flanger", "Filtre Passe Bas", "Filtre Passe Haut", "Phaser", "Tremolo", "Tubevox"};
 	}
 	
 	void Start(){

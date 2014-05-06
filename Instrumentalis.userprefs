@@ -1,9 +1,8 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\DestroyByContact.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\GameControllerTutoQuiz.cs">
     <Files>
-      <File FileName="Assets\Scripts\GameControllerAtrappeNotes.cs" Line="40" Column="57" />
-      <File FileName="Assets\Scripts\DestroyByContact.cs" Line="6" Column="24" />
+      <File FileName="Assets\Scripts\GameControllerTutoQuiz.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
