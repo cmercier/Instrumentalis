@@ -108,22 +108,16 @@ public class GameControllerQuiz : MonoBehaviour {
 		switch (choix) {
 		case "Delay":
 			return 0;
-			break;
 		case "Filtre Pass Haut":
 			return 1;
-			break;
 		case "Filtre Pass Bas":
 			return 2;
-			break;
 		case "effet 4":
 			return 3;
-			break;
 		case "effet 5":
 			return 4;
-			break;
 		default:
 			return -1;
-			break;
 		}
 	}
 }

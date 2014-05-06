@@ -76,22 +76,16 @@ public class GameController : MonoBehaviour {
 		switch (note) {
 		case "Note 1":
 			return 1;
-			break;
 		case "Note 2":
 			return 2;
-			break;
 		case "Note 3":
 			return 3;
-			break;
 		case "Note 4":
 			return 4;
-			break;
 		case "Note 5":
 			return 5;
-			break;
 		default:
 			return 0;
-			break;
 		}
 	}
 }
