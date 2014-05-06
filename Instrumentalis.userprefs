@@ -1,8 +1,9 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\GameControllerTutoQuiz.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\GameControllerQuiz.cs">
     <Files>
-      <File FileName="Assets\Scripts\GameControllerTutoQuiz.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\GameControllerTutoQuiz.cs" Line="76" Column="1" />
+      <File FileName="Assets\Scripts\GameControllerQuiz.cs" Line="110" Column="32" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

@@ -13,6 +13,7 @@ public class GameControllerQuiz : MonoBehaviour {
 	private int solution;
 	private int nbreQuestions = 4;
 	private int numQuestion = 0;
+	private int nbreEffets;
 	
 	private AudioSource audioPlayer;
 
@@ -23,11 +24,12 @@ public class GameControllerQuiz : MonoBehaviour {
 	public GameControllerQuiz()
 	{
 		effets_texte = new String[]{"Clean","Delay","Distortion","Echo", "Flanger", "Filtre Passe Bas", "Filtre Passe Haut", "Phaser", "Tremolo", "Tubevox"};
+		nbreEffets = effets_texte.Length;
 	}
 	
 	void Start(){
 		affichage.text = "Vous allez devoir deviner le nom de l'effet";
-		solution = tirageAleatoire (0, 4+1);
+		solution = tirageAleatoire (0, nbreEffets);
 		alreadyAsked.Add (solution);
 		remplirChoix ();
 		
@@ -53,7 +55,7 @@ public class GameControllerQuiz : MonoBehaviour {
 			numQuestion++;
 
 			do 
-				solution = tirageAleatoire(0, 4+1);
+				solution = tirageAleatoire(0, nbreEffets);
 			while(alreadyAsked.IndexOf(solution) != -1); 
 			alreadyAsked.Add(solution);
 
@@ -76,19 +78,19 @@ public class GameControllerQuiz : MonoBehaviour {
 	{
 		ArrayList alreadyFilled = new ArrayList();
 		alreadyFilled.Add (solution);
-		int solutionPlace = tirageAleatoire(0, 4);
+		int solutionPlace = tirageAleatoire(0, nbreQuestions);
 		int rand;
 
 		// On ajoute la solution dans un des 4
 		propositions [solutionPlace].text = effets_texte [solution];
 
 		// On remplit le reste
-		for(int i = 0; i < 4; i++)
+		for(int i = 0; i < nbreQuestions; i++)
 		{
 			if (i != solutionPlace)
 			{
 				do 
-					rand = tirageAleatoire(0, 5); 
+					rand = tirageAleatoire(0, nbreEffets); 
 				while(alreadyFilled.IndexOf(rand) != -1); 
 
 				propositions[i].text = effets_texte[rand];
@@ -105,7 +107,7 @@ public class GameControllerQuiz : MonoBehaviour {
 
 	int getChoix(string choix)
 	{
-		for(int i = 0; i < effets_texte.Length; i++)
+		for(int i = 0; i < nbreEffets; i++)
 		{
 			if (effets_texte[i] == choix)
 				return i;
