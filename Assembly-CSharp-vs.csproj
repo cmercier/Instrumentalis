@@ -47,10 +47,14 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\BoutonMenu.cs" />
+     <Compile Include="Assets\Scripts\DestroyByBoundary.cs" />
+     <Compile Include="Assets\Scripts\DestroyByContact.cs" />
      <Compile Include="Assets\Scripts\FollowObject.cs" />
      <Compile Include="Assets\Scripts\GameController.cs" />
+     <Compile Include="Assets\Scripts\GameControllerAtrappeNotes.cs" />
      <Compile Include="Assets\Scripts\GameControllerQuiz.cs" />
      <Compile Include="Assets\Scripts\GameControllerTutoQuiz.cs" />
+     <Compile Include="Assets\Scripts\Mover.cs" />
      <Compile Include="Assets\Scripts\Next_Trigger.cs" />
      <Compile Include="Assets\Scripts\Play_Sound.cs" />
      <Compile Include="Assets\Scripts\Play_Sound_Quiz.cs" />
