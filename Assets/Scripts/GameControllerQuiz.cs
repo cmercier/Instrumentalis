@@ -105,19 +105,11 @@ public class GameControllerQuiz : MonoBehaviour {
 
 	int getChoix(string choix)
 	{
-		switch (choix) {
-		case "Delay":
-			return 0;
-		case "Filtre Pass Haut":
-			return 1;
-		case "Filtre Pass Bas":
-			return 2;
-		case "effet 4":
-			return 3;
-		case "effet 5":
-			return 4;
-		default:
-			return -1;
+		for(int i = 0; i < effets_texte.Length; i++)
+		{
+			if (effets_texte[i] == choix)
+				return i;
 		}
+		return -1;
 	}
 }
