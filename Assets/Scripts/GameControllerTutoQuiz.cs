@@ -11,7 +11,7 @@ public class GameControllerTutoQuiz : MonoBehaviour {
 
 	int numEffet = 0;
 
-	String[] effets_texte;
+	private String[] effets_texte;
 	
 	private AudioSource audioPlayer;
 	
@@ -21,7 +21,7 @@ public class GameControllerTutoQuiz : MonoBehaviour {
 	}
 	
 	void Start(){
-		affichage.text = "Découvrer des effets de guitare avant de répondre au quiz" + "Effets : " + (numEffet+1) + "/" + effets_texte.Length;;
+		affichage.text = "Découvrer des effets de guitare avant de répondre au quiz" + "Effets : " + (numEffet+1) + "/" + effets_texte.Length;
 		nom_effet.text = effets_texte [numEffet];
 
 		GameObject audioPlayerObject = GameObject.FindWithTag ("AudioPlayer");
@@ -69,7 +69,7 @@ public class GameControllerTutoQuiz : MonoBehaviour {
 
 	public void lancer_jeu()
 	{
-
+		Application.LoadLevel ("Quiz_Effets");
 	}
 
 }
