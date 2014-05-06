@@ -15,18 +15,19 @@ public class DestroyByContact : MonoBehaviour {
 			Debug.Log ("Cannot find GameController script");
 	}
 	
-	void OnTriggerEnter(Collider other)
+	/*void OnTriggerEnter2D(Collider2D other)
 	{
 		if (other.tag == "Boundary")
 			return;
 
-		/*if (other.tag == "Note")
-		{
-
-		}*/
-
 		gameController.AddScore (scoreValue);
 		Destroy(other.gameObject);
 		Destroy(gameObject);
+	}*/
+
+	void OnMouseEnter ()
+	{
+		gameController.AddScore (scoreValue);
+		Destroy(gameObject); 
 	}
 }
