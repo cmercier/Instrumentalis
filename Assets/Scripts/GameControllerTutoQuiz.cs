@@ -17,7 +17,7 @@ public class GameControllerTutoQuiz : MonoBehaviour {
 	
 	public GameControllerTutoQuiz()
 	{
-		effets_texte = new String[]{"Delay","Filtre Pass Haut", "Filtre Pass Bas"};
+		effets_texte = new String[]{"Clean","Delay","Distortion","Echo", "Flanger", "Filtre Passe Bas", "Filtre Passe Haut", "Phaser", "Tremolo", "Tubevox"};
 	}
 	
 	void Start(){

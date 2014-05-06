@@ -54,19 +54,21 @@ public class GameControllerQuiz : MonoBehaviour {
 			affichage.text = "Bien joué ";
 			numQuestion++;
 
-			do 
-				solution = tirageAleatoire(0, nbreEffets);
-			while(alreadyAsked.IndexOf(solution) != -1); 
-			alreadyAsked.Add(solution);
-
-			remplirChoix();
-			audioPlayer.clip = effets_son [solution];
 			if (numQuestion == nbreQuestions)
 			{
 				affichage.text = "Vous avez fini le quiz";
 				numQuestion = 0;
 				alreadyAsked.Clear();
 			}
+
+			do 
+				solution = tirageAleatoire(0, nbreEffets);
+			while(alreadyAsked.Contains(solution)); 
+			alreadyAsked.Add(solution);
+
+			remplirChoix();
+			audioPlayer.clip = effets_son [solution];
+
 		}
 		else
 		{
@@ -91,7 +93,7 @@ public class GameControllerQuiz : MonoBehaviour {
 			{
 				do 
 					rand = tirageAleatoire(0, nbreEffets); 
-				while(alreadyFilled.IndexOf(rand) != -1); 
+				while(alreadyFilled.Contains(rand)); 
 
 				propositions[i].text = effets_texte[rand];
 				alreadyFilled.Add(rand);
