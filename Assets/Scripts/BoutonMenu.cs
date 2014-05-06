@@ -5,10 +5,12 @@ public class BoutonMenu : MonoBehaviour {
 	
 	void OnMouseEnter() {
 		renderer.enabled = true;
+		audio.Play ();
 	}
 
 	void OnMouseExit() {
-			renderer.enabled = false;
+		renderer.enabled = false;
+		audio.Stop ();
 	}
 	
 }
