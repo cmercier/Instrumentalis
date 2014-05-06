@@ -10,10 +10,7 @@ public class BoutonMenu : MonoBehaviour {
 
 	void OnMouseExit() {
 		renderer.enabled = false;
-<<<<<<< HEAD
 		audio.Stop ();
-=======
->>>>>>> FETCH_HEAD
 	}
 
 	void OnMouseDown() {
