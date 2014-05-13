@@ -14,7 +14,7 @@ public class BoutonMenu : MonoBehaviour {
 	}
 
 	void OnMouseDown() {
-		Application.LoadLevel ("Simon");
+		Application.LoadLevel ("MenuGuitare");
 	}
 	
 }
