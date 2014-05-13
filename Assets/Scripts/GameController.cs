@@ -6,6 +6,7 @@ public class GameController : MonoBehaviour {
 	public GUIText affichage;
 
 	public AudioClip[] musiques;
+	public AudioClip musique_fin;
 
 	int curseur = 0;
 	int numSeq = 0;
@@ -17,6 +18,8 @@ public class GameController : MonoBehaviour {
 	int[][] sequences;
 
 	private AudioSource audioPlayer;
+
+	private bool end = false;
 
 	public GameController()
 	{
@@ -44,8 +47,17 @@ public class GameController : MonoBehaviour {
 		audioPlayer.Play();
 	}
 
+	void Update() 
+	{
+		if (end == true && !audioPlayer.isPlaying)
+			Application.LoadLevel ("MenuGuitare");
+	}
+
 	public void testerProgression(string Note)
 	{
+		if (end)
+			return;
+
 		int note = getNote (Note);
 		affichage.text = (curseur+1) + "/" + sequences[0].Length;
 		if(sequences[numSeq][curseur] == note)
@@ -58,8 +70,11 @@ public class GameController : MonoBehaviour {
 				numSeq++;
 				if(numSeq == sequences.Length) // Si tout est fini, on obtient la partie de l'instrument
 				{
-					numSeq = 0;
-					Application.LoadLevel("MenuGuitare");
+					affichage.text = "Félicitation, vous avez fini le mini-jeu, attendez la fin de la musique";
+					end = true;
+					audioPlayer.clip = musique_fin;
+					audioPlayer.PlayDelayed((float)0.5);
+					return;
 				}
 				audioPlayer.clip = musiques [numSeq];
 				audioPlayer.PlayDelayed((float)0.5);
