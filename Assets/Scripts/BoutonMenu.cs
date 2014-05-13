@@ -3,19 +3,32 @@ using System.Collections;
 
 public class BoutonMenu : MonoBehaviour {
 	public string Toload;
+	private bool done=false;
 	
 	void OnMouseEnter() {
-		renderer.enabled = true;
-		audio.Play ();
+		if (!done) {
+						renderer.enabled = true;
+						audio.Play ();
+				} else
+						renderer.enabled = true;
 	}
 
 	void OnMouseExit() {
-		renderer.enabled = false;
-		audio.Stop ();
+		if (!done) {
+						renderer.enabled = false;
+						audio.Stop ();
+				} else
+						renderer.enabled = true;
 	}
 
 	void OnMouseDown() {
-		Application.LoadLevel (Toload);
+		if(!done)
+			Application.LoadLevel (Toload);
+	}
+
+	public void setDoneTrue()
+	{
+		done = true;
 	}
 	
 }
