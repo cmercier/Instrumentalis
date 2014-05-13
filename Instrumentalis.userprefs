@@ -18,6 +18,9 @@
       <File FileName="Assets/Scripts/BoutonMenu.cs" Line="26" Column="35" />
       <File FileName="Assets/Scripts/GameControllerAtrappeNotes.cs" Line="1" Column="1" />
 >>>>>>> 171339b5a36617c4be8d49455c6e266695df62d8
+<<<<<<< HEAD
+>>>>>>> FETCH_HEAD
+=======
 >>>>>>> FETCH_HEAD
     </Files>
   </MonoDevelop.Ide.Workbench>
