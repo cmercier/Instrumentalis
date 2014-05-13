@@ -49,7 +49,7 @@ public class GameController : MonoBehaviour {
 
 	void Update() 
 	{
-		if (end == true && !audioPlayer.isPlaying)
+		if (end == true && !this.audio.isPlaying)
 			Application.LoadLevel ("MenuGuitare");
 	}
 
@@ -72,8 +72,8 @@ public class GameController : MonoBehaviour {
 				{
 					affichage.text = "Félicitation, vous avez fini le mini-jeu, attendez la fin de la musique";
 					end = true;
-					audioPlayer.clip = musique_fin;
-					audioPlayer.PlayDelayed((float)0.5);
+					desactivateButtons();
+					this.audio.Play();
 					return;
 				}
 				audioPlayer.clip = musiques [numSeq];
@@ -86,6 +86,25 @@ public class GameController : MonoBehaviour {
 			affichage.text = "Erreur, veuillez recommencer la séquence";
 		}
 
+	}
+
+	void desactivateButtons()
+	{
+		GameObject[] Notes = GameObject.FindGameObjectsWithTag ("Note");
+		if (Notes != null)
+		{
+			foreach(GameObject n in Notes)
+			{
+				AudioSource m = n.GetComponent<AudioSource>();
+				m.enabled = false;
+			}
+		}
+		if (audioPlayer == null)
+		{
+			Debug.Log ("Cannot find 'Notes' script");
+		}
+
+		audioPlayer.audio.enabled = false;
 	}
 
 	int getNote(string note)
