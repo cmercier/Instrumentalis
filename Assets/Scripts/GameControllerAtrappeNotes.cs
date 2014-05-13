@@ -26,7 +26,11 @@ public class GameControllerAtrappeNotes : MonoBehaviour {
 	void Update()
 	{
 		if (score == 50)
+		{
 			restartText.text = "Bravo vous avez gagné";
+			Application.LoadLevel ("MenuGuitare");
+		}
+
 	}
 	
 	IEnumerator spawnWaves()

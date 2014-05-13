@@ -41,6 +41,7 @@ public class GameController : MonoBehaviour {
 		}
 
 		audioPlayer.clip = musiques [numSeq];
+		audioPlayer.Play();
 	}
 
 	public void testerProgression(string Note)
@@ -58,9 +59,10 @@ public class GameController : MonoBehaviour {
 				if(numSeq == sequences.Length) // Si tout est fini, on obtient la partie de l'instrument
 				{
 					numSeq = 0;
-					Application.LoadLevel ("TutoQuiz");
+					Application.LoadLevel("MenuGuitare");
 				}
 				audioPlayer.clip = musiques [numSeq];
+				audioPlayer.PlayDelayed((float)0.5);
 			}
 		}
 		else
