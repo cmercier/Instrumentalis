@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class BoutonMenu : MonoBehaviour {
-	public string Toload;
+	public string ToLoad;
 	private bool done=false;
 	
 	void OnMouseEnter() {
@@ -23,7 +23,7 @@ public class BoutonMenu : MonoBehaviour {
 
 	void OnMouseDown() {
 		if(!done)
-			Application.LoadLevel (Toload);
+			Application.LoadLevel (ToLoad);
 	}
 
 	public void setDoneTrue()

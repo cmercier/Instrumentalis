@@ -1,9 +1,10 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/GameControllerAtrappeNotes.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/BoutonQuitter.cs">
     <Files>
-      <File FileName="Assets/Scripts/BoutonMenu.cs" Line="26" Column="35" />
-      <File FileName="Assets/Scripts/GameControllerAtrappeNotes.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/BoutonQuitter.cs" Line="11" Column="1" />
+      <File FileName="Assets/Scripts/BoutonRetour.cs" Line="14" Column="1" />
+      <File FileName="Assets/Scripts/BoutonMenu.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

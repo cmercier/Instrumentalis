@@ -47,6 +47,8 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\BoutonMenu.cs" />
+     <Compile Include="Assets\Scripts\BoutonQuitter.cs" />
+     <Compile Include="Assets\Scripts\BoutonRetour.cs" />
      <Compile Include="Assets\Scripts\DestroyByBoundary.cs" />
      <Compile Include="Assets\Scripts\DestroyByContact.cs" />
      <Compile Include="Assets\Scripts\FollowObject.cs" />
