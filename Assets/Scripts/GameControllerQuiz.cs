@@ -57,6 +57,7 @@ public class GameControllerQuiz : MonoBehaviour {
 			if (numQuestion == nbreQuestions)
 			{
 				affichage.text = "Vous avez fini le quiz";
+				Application.LoadLevel("MenuGuitare");
 				numQuestion = 0;
 				alreadyAsked.Clear();
 			}

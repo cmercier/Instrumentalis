@@ -35,6 +35,7 @@ public class GameControllerTutoQuiz : MonoBehaviour {
 		}
 		
 		audioPlayer.clip = effets_son [numEffet];
+		audioPlayer.Play ();
 	}
 	
 	public void precedent()
@@ -45,6 +46,7 @@ public class GameControllerTutoQuiz : MonoBehaviour {
 			audioPlayer.clip = effets_son[numEffet];
 			nom_effet.text = effets_texte [numEffet];
 			affichage.text = "Effets : " + (numEffet+1) + "/" + effets_texte.Length;
+			audioPlayer.PlayDelayed((float)0.5);
 		}
 		else
 		{
@@ -60,6 +62,7 @@ public class GameControllerTutoQuiz : MonoBehaviour {
 			audioPlayer.clip = effets_son[numEffet];
 			nom_effet.text = effets_texte [numEffet];
 			affichage.text = "Effets : " + (numEffet+1) + "/" + effets_texte.Length;
+			audioPlayer.PlayDelayed((float)0.5);
 		}
 		else
 		{
