@@ -44,6 +44,7 @@ public class GameControllerQuiz : MonoBehaviour {
 		}
 		
 		audioPlayer.clip = effets_son [solution];
+		audioPlayer.Play ();
 	}
 
 	public void testerChoix (string Choix)
@@ -69,6 +70,7 @@ public class GameControllerQuiz : MonoBehaviour {
 
 			remplirChoix();
 			audioPlayer.clip = effets_son [solution];
+			audioPlayer.PlayDelayed((float)0.5);
 
 		}
 		else
