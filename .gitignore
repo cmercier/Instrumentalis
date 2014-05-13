@@ -218,5 +218,6 @@ pip-log.txt
 ###       UNITY            ###
 ####################
 
-.userprefs
-.csproj
+*.userprefs
+*.csproj
+Temp/
