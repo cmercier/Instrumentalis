@@ -2,6 +2,7 @@
 using System.Collections;
 
 public class BoutonMenu : MonoBehaviour {
+	public string Toload;
 	
 	void OnMouseEnter() {
 		renderer.enabled = true;
@@ -14,7 +15,7 @@ public class BoutonMenu : MonoBehaviour {
 	}
 
 	void OnMouseDown() {
-		Application.LoadLevel ("MenuGuitare");
+		Application.LoadLevel (Toload);
 	}
 	
 }
