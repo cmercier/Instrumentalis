@@ -219,5 +219,4 @@ pip-log.txt
 ####################
 
 *.userprefs
-*.csproj
 Temp/
