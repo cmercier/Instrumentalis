@@ -57,6 +57,7 @@
      <Compile Include="Assets\Scripts\GameControllerAtrappeNotes.cs" />
      <Compile Include="Assets\Scripts\GameControllerQuiz.cs" />
      <Compile Include="Assets\Scripts\GameControllerTutoQuiz.cs" />
+     <Compile Include="Assets\Scripts\Init.cs" />
      <Compile Include="Assets\Scripts\Mover.cs" />
      <Compile Include="Assets\Scripts\Next_Trigger.cs" />
      <Compile Include="Assets\Scripts\Play_Sound.cs" />

@@ -8,6 +8,8 @@ public class BoutonRetour : MonoBehaviour {
 	void OnMouseDown()
 	{
 		Application.LoadLevel (ToLoad);
+		if(PlayerPrefs.GetInt(ToLoad)<2)
+			PlayerPrefs.SetInt (ToLoad, 1);
 	}
 
 }
