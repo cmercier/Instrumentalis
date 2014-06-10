@@ -11,7 +11,8 @@ public class GameControllerQuiz : MonoBehaviour {
 	public AudioClip[] effets_son;
 	
 	private int solution;
-	private int nbreQuestions = 4;
+	public int nbreQuestions;
+	private int nbrePropositions = 4;
 	private int numQuestion = 0;
 	private int nbreEffets;
 	
@@ -57,20 +58,24 @@ public class GameControllerQuiz : MonoBehaviour {
 
 			if (numQuestion == nbreQuestions)
 			{
-				affichage.text = "Vous avez fini le quiz";
-				Application.LoadLevel("MenuGuitare");
+				affichage.text = "Bravo, vous avez fini le quiz";
+				PlayerPrefs.SetInt("corps", 1);
+				audioPlayer.Stop();
+				Invoke("loadLevel", 3);
 				numQuestion = 0;
 				alreadyAsked.Clear();
 			}
+			else
+			{
+				do 
+					solution = tirageAleatoire(0, nbreEffets);
+				while(alreadyAsked.Contains(solution)); 
+				alreadyAsked.Add(solution);
 
-			do 
-				solution = tirageAleatoire(0, nbreEffets);
-			while(alreadyAsked.Contains(solution)); 
-			alreadyAsked.Add(solution);
-
-			remplirChoix();
-			audioPlayer.clip = effets_son [solution];
-			audioPlayer.PlayDelayed((float)0.5);
+				remplirChoix();
+				audioPlayer.clip = effets_son [solution];
+				audioPlayer.PlayDelayed((float)0.5);
+			}
 
 		}
 		else
@@ -79,18 +84,20 @@ public class GameControllerQuiz : MonoBehaviour {
 		}
 	}
 
+	void loadLevel() { Application.LoadLevel("MenuGuitare"); }
+
 	void remplirChoix()
 	{
 		ArrayList alreadyFilled = new ArrayList();
 		alreadyFilled.Add (solution);
-		int solutionPlace = tirageAleatoire(0, nbreQuestions);
+		int solutionPlace = tirageAleatoire(0, nbrePropositions);
 		int rand;
 
 		// On ajoute la solution dans un des 4
 		propositions [solutionPlace].text = effets_texte [solution];
 
 		// On remplit le reste
-		for(int i = 0; i < nbreQuestions; i++)
+		for(int i = 0; i < nbrePropositions; i++)
 		{
 			if (i != solutionPlace)
 			{

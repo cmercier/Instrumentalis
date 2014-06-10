@@ -27,7 +27,12 @@ public class DestroyByContact : MonoBehaviour {
 
 	void OnMouseEnter ()
 	{
+		if (gameObject.tag == "Fausse_Note")
+			gameController.audio.mute = true;
+		else
+			gameController.audio.mute = false;
+		
 		gameController.AddScore (scoreValue);
-		Destroy(gameObject); 
+		Destroy(gameObject);
 	}
 }

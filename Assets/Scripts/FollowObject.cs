@@ -26,7 +26,6 @@ public class FollowObject : MonoBehaviour {
 	
 	void Update()
 	{
-		
 		if (clampToScreen)
 		{
 			Vector3 relativePosition = camTransform.InverseTransformPoint(target.position);

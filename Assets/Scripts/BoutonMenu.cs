@@ -3,25 +3,33 @@ using System.Collections;
 
 public class BoutonMenu : MonoBehaviour {
 	public string ToLoad;
+	public string elementName;
+
+	void Start()
+	{
+		if (PlayerPrefs.GetInt("manche") == 1 && PlayerPrefs.GetInt("corps") == 1 && PlayerPrefs.GetInt("tete") == 1)
+		    PlayerPrefs.SetInt("guitare", 1);
+
+		if (PlayerPrefs.GetInt(elementName) == 1)
+			renderer.enabled = true;
+	}
 	
 	void OnMouseEnter() {
-		if(PlayerPrefs.GetInt(ToLoad)<2)
+		if(true /*PlayerPrefs.GetInt(ToLoad)<2 && PlayerPrefs.GetInt(elementName) != 1*/)
 		{
 			renderer.enabled = true;
 			audio.Play ();
 		} 
-		else
-			renderer.enabled = true;
+
 	}
 
 	void OnMouseExit() {
-		if(PlayerPrefs.GetInt(ToLoad)<2)
-		{
+		if(PlayerPrefs.GetInt(ToLoad)<2 && PlayerPrefs.GetInt(elementName) != 1)
 			renderer.enabled = false;
-			audio.Stop ();
-		} 
 		else
 			renderer.enabled = true;
+
+		audio.Stop ();
 	}
 
 	void OnMouseDown() {

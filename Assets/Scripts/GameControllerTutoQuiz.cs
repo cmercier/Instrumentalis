@@ -21,7 +21,7 @@ public class GameControllerTutoQuiz : MonoBehaviour {
 	}
 	
 	void Start(){
-		affichage.text = "Découvrer des effets de guitare avant de répondre au quiz" + "Effets : " + (numEffet+1) + "/" + effets_texte.Length;
+		affichage.text = "Découvrez des effets de guitare avant de répondre au quiz. " + "Effets : " + (numEffet+1) + "/" + effets_texte.Length;
 		nom_effet.text = effets_texte [numEffet];
 
 		GameObject audioPlayerObject = GameObject.FindWithTag ("AudioPlayer");

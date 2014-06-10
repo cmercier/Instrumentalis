@@ -31,7 +31,7 @@ public class GameController : MonoBehaviour {
 	}
 
 	void Start(){
-		affichage.text = "Vous pouvez commencer";
+		affichage.text = "Vous allez devoir exercer votre oreille, reproduisez les différentes séquences";
 
 		GameObject audioPlayerObject = GameObject.FindWithTag ("AudioPlayer");
 		if (audioPlayerObject != null)
@@ -49,8 +49,11 @@ public class GameController : MonoBehaviour {
 
 	void Update() 
 	{
-		if (end == true && !this.audio.isPlaying)
+		if (end == true && !this.audio.isPlaying && !audioPlayer.audio.isPlaying)
+		{
+			PlayerPrefs.SetInt("manche",1);
 			Application.LoadLevel ("MenuGuitare");
+		}
 	}
 
 	public void testerProgression(string Note)
@@ -72,8 +75,8 @@ public class GameController : MonoBehaviour {
 				{
 					affichage.text = "Félicitation, vous avez fini le mini-jeu, attendez la fin de la musique";
 					end = true;
-					desactivateButtons();
-					this.audio.Play();
+					this.audio.PlayDelayed((float)0.365);
+					Invoke("desactivateButtons", (float)0.365);
 					return;
 				}
 				audioPlayer.clip = musiques [numSeq];
@@ -85,7 +88,6 @@ public class GameController : MonoBehaviour {
 			curseur = 0;
 			affichage.text = "Erreur, veuillez recommencer la séquence";
 		}
-
 	}
 
 	void desactivateButtons()
