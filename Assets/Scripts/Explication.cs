@@ -9,18 +9,17 @@ public class Explication : MonoBehaviour {
 	public string nomScene;
 	private GameObject[] instruments;
 
-	void Awake()
-	{
-		instruments = GameObject.FindGameObjectsWithTag ("ToActivate");
-		foreach(GameObject i in instruments)
-		{
-			i.layer = duringLayer;
-		}
-	}
 	void Start()
 	{
 		if(PlayerPrefs.GetInt(nomScene) == 0)
+		{
 			parent.SetActive(true);
+			instruments = GameObject.FindGameObjectsWithTag ("ToActivate");
+			foreach(GameObject i in instruments)
+			{
+				i.layer = afterLayer+1;
+			}
+		}
 		else
 			parent.SetActive(false);
 	}
@@ -32,7 +31,7 @@ public class Explication : MonoBehaviour {
 
 		foreach(GameObject i in instruments)
 		{
-			i.layer = afterLayer;
+			i.layer = afterLayer-1;
 		}
 	}
 
